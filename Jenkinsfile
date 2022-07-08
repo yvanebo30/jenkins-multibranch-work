@@ -3,7 +3,7 @@ pipeline{
   stages{
   	stage('version-control'){
   		steps{
-  			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'bf6ba41e-79d9-452c-98cc-30f2858ed3af', url: 'https://github.com/yvanebo30/jenkins-parallel-work.git']]])
+  			checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'bf6ba41e-79d9-452c-98cc-30f2858ed3af', url: 'https://github.com/yvanebo30/jenkins-multibranch-work.git']]])
   		}
   	}
     stage('parallel-job'){
